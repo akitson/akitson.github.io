@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Untitled Document</title>
+</head>
+
+<body>
+<p>&lt;html&gt;<br />
+  &lt;body&gt;<br />
+  &lt;script type=&quot;text/javascript&quot; src=&quot;https://www.gstatic.com/charts/loader.js&quot;&gt;&lt;/script&gt;</p>
+<p>&lt;div id=&quot;sankey_multiple&quot; style=&quot;width: 900px; height: 300px;&quot;&gt;&lt;/div&gt;</p>
+<p>&lt;script type=&quot;text/javascript&quot;&gt;<br />
+  google.charts.load(&quot;current&quot;, {packages:[&quot;sankey&quot;]});<br />
+  google.charts.setOnLoadCallback(drawChart);<br />
+  function drawChart() {<br />
+  var data = new google.visualization.DataTable();<br />
+  data.addColumn('string', 'From');<br />
+  data.addColumn('string', 'To');<br />
+  data.addColumn('number', 'Weight');<br />
+  data.addRows([<br />
+  [ 'Biofeedback', 'Brain Electrical Activation', 7 ],<br />
+  [ 'Biofeedback', 'Blood Flow Changes', 5 ],<br />
+  [ 'Biofeedback', 'Skin Electrical Activity', 6 ],<br />
+  [ 'Biofeedback', 'Respiration Rate', 16 ],<br />
+  [ 'Physical Movement', 'Head', 1 ],<br />
+  [ 'Physical Movement', 'Body', 7 ],<br />
+  [ 'Physical Movement', 'Arm', 5 ],<br />
+  [ 'Controller', 'Joystick', 4 ],<br />
+  [ 'Brain Electrical Activation', 'Change in Object Appearance/Animation', 3 ],<br />
+  [ 'Brain Electrical Activation', 'Levitation/Floating', 3 ],<br />
+  [ 'Brain Electrical Activation', 'Change in Light/Colour', 2 ],<br />
+  [ 'Brain Electrical Activation', 'Change in Music/Audio', 1 ],<br />
+  [ 'Blood Flow Changes', 'Change in Music/Audio', 4 ],<br />
+  [ 'Blood Flow Changes', 'Change in Object Appearance/Animation', 2 ],<br />
+  [ 'Blood Flow Changes', 'Change in Light/Colour', 2 ],<br />
+  [ 'Skin Electrical Activity', 'Change in Light/Colour', 2 ],<br />
+  [ 'Skin Electrical Activity', 'Change in Object Appearance/Animation', 3 ],<br />
+  [ 'Skin Electrical Activity', 'Change in Music/Audio', 3 ],<br />
+  [ 'Skin Electrical Activity', 'Object Movement', 1 ],<br />
+  [ 'Respiration Rate', 'Object Movement', 4 ],<br />
+  [ 'Respiration Rate', 'Change in Light/Colour', 3 ],<br />
+  [ 'Respiration Rate', 'Levitation/Floating', 1 ],<br />
+  [ 'Respiration Rate', 'Change in Object Appearance/Animation', 6 ],<br />
+  [ 'Respiration Rate', 'Change in Music/Audio', 7 ],<br />
+  [ 'Respiration Rate', 'User Movement', 2 ],<br />
+  [ 'Head', 'User Movement', 1 ],<br />
+  [ 'Body', 'User Movement', 3 ],<br />
+  [ 'Body', 'Change in Object Appearance/Animation', 2 ],<br />
+  [ 'Body', 'Change in Music/Audio', 1 ],<br />
+  [ 'Body', 'Object Movement', 1 ],<br />
+  [ 'Body', 'Change in Light/Colour', 1 ],<br />
+  [ 'Arm', 'Change in Object Appearance/Animation', 1 ],<br />
+  [ 'Arm', 'Object Movement', 4 ],<br />
+  [ 'Arm', 'Change in Light/Colour', 2 ],<br />
+  [ 'Joystick', 'User Movement', 4 ],<br />
+  [ 'User Movement', 'Relaxed', 3 ],<br />
+  [ 'User Movement', 'Calm', 2 ],<br />
+  [ 'User Movement', 'Focused', 1 ],<br />
+  [ 'User Movement', 'Decreased Stress/Anxiety', 2 ],<br />
+  [ 'User Movement', 'Increased Mindfulness', 1 ],<br />
+  [ 'User Movement', 'Presence/Social Presence/Embodiment', 2 ],<br />
+  [ 'User Movement', 'Connection/Empathy', 2 ],<br />
+  [ 'User Movement', 'Emptiness/Disembodied/Self-transcendence', 1 ],<br />
+  [ 'User Movement', 'Engaged', 2 ],<br />
+  [ 'User Movement', 'Appreciation', 1 ],<br />
+  [ 'User Movement', 'Increased Risk Perception', 1 ],<br />
+  [ 'Change in Light/Colour', 'Relaxed', 7 ],<br />
+  [ 'Change in Light/Colour', 'Calm', 2 ],<br />
+  [ 'Change in Light/Colour', 'Content/Happy', 4 ],<br />
+  [ 'Change in Light/Colour', 'Clarity', 2 ],<br />
+  [ 'Change in Light/Colour', 'Decreased Stress/Anxiety', 1 ],<br />
+  [ 'Change in Light/Colour', 'Increased Mindfulness', 1 ],<br />
+  [ 'Change in Light/Colour', 'Harmony/Balance', 4 ],<br />
+  [ 'Change in Light/Colour', 'Connection/Empathy', 1 ],<br />
+  [ 'Change in Light/Colour', 'Reflected Affect', 1 ],<br />
+  [ 'Object Movement', 'Relaxed', 3 ],<br />
+  [ 'Object Movement', 'Calm', 6 ],<br />
+  [ 'Object Movement', 'Increased Well-being', 4 ],<br />
+  [ 'Object Movement', 'Clarity', 3 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Relaxed', 4 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Calm', 4 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Increased Well-being', 2 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Clarity', 1 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Focused', 2 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Decreased Stress/Anxiety', 2 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Increased Mindfulness', 4 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Presence/Social Presence/Embodiment', 2 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Connection/Empathy', 3 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Engaged', 3 ],<br />
+  [ 'Change in Object Appearance/Animation', 'Appreciation', 1 ],<br />
+  [ 'Change in Music/Audio', 'Relaxed', 8 ],<br />
+  [ 'Change in Music/Audio', 'Calm', 3 ],<br />
+  [ 'Change in Music/Audio', 'Content/Happy', 3 ],<br />
+  [ 'Change in Music/Audio', 'Increased Well-being', 1 ],<br />
+  [ 'Change in Music/Audio', 'Clarity', 2 ],<br />
+  [ 'Change in Music/Audio', 'Focused', 3 ],<br />
+  [ 'Change in Music/Audio', 'Decreased Stress/Anxiety', 3 ],<br />
+  [ 'Change in Music/Audio', 'Increased Mindfulness', 3 ],<br />
+  [ 'Change in Music/Audio', 'Harmony/Balance', 3 ],<br />
+  [ 'Change in Music/Audio', 'Connection/Empathy', 1 ],<br />
+  [ 'Change in Music/Audio', 'Emptiness/Disembodied/Self-transcendence', 1 ],<br />
+  [ 'Change in Music/Audio', 'Engaged', 1 ],<br />
+  [ 'Change in Music/Audio', 'Reflected Affect', 1 ],<br />
+  [ 'Levitation/Floating', 'Relaxed', 1 ],<br />
+  [ 'Levitation/Floating', 'Calm', 2 ],<br />
+  [ 'Levitation/Floating', 'Focused', 1 ],<br />
+  [ 'Levitation/Floating', 'Harmony/Balance', 1 ],<br />
+  [ 'Levitation/Floating', 'Increased Mindfulness', 1 ],<br />
+  [ 'Levitation/Floating', 'Presence/Social Presence/Embodiment', 2 ]<br />
+  ]);<br />
+  <br />
+  var colors = ['#0FA3B1', '#FFE066', '#F25F5C'];</p>
+<p> var options = {<br />
+  height: 600,<br />
+  width: 1200,<br />
+  sankey: {<br />
+  node: { <br />
+  label: {fontName: 'Times-Roman',<br />
+  fontSize: 12,<br />
+  bold: true,<br />
+  },<br />
+  colors: colors<br />
+  },<br />
+  link: {<br />
+  colorMode: 'gradient',<br />
+  colors: colors<br />
+  }<br />
+  }<br />
+  };<br />
+</p>
+<p> // Instantiate and draw our chart, passing in some options.<br />
+  var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));<br />
+  chart.draw(data, options);<br />
+  }<br />
+  &lt;/script&gt;<br />
+  &lt;/body&gt;<br />
+  &lt;/html&gt;</p>
+</body>
+</html>
