@@ -1,7 +1,135 @@
-<!DOCTYPE html>
 <html>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<div id="sankey_multiple" style="width: 900px; height: 300px;"></div>
+
+<script type="text/javascript">
+google.charts.load("current", {packages:["sankey"]});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart() {
+var data = new google.visualization.DataTable();
+data.addColumn('string', 'From');
+data.addColumn('string', 'To');
+data.addColumn('number', 'Weight');
+data.addRows([
+[ 'Biofeedback', 'Brain Electrical Activation', 7 ],
+[ 'Biofeedback', 'Blood Flow Changes', 5 ],
+[ 'Biofeedback', 'Skin Electrical Activity', 6 ],
+[ 'Biofeedback', 'Respiration Rate', 16 ],
+[ 'Physical Movement', 'Head', 1 ],
+[ 'Physical Movement', 'Body', 7 ],
+[ 'Physical Movement', 'Arm', 5 ],
+[ 'Controller', 'Joystick', 4 ],
+[ 'Brain Electrical Activation', 'Change in Object Appearance/Animation', 3 ],
+[ 'Brain Electrical Activation', 'Levitation/Floating', 3 ],
+[ 'Brain Electrical Activation', 'Change in Light/Colour', 2 ],
+[ 'Brain Electrical Activation', 'Change in Music/Audio', 1 ],
+[ 'Blood Flow Changes', 'Change in Music/Audio', 4 ],
+[ 'Blood Flow Changes', 'Change in Object Appearance/Animation', 2 ],
+[ 'Blood Flow Changes', 'Change in Light/Colour', 2 ],
+[ 'Skin Electrical Activity', 'Change in Light/Colour', 2 ],
+[ 'Skin Electrical Activity', 'Change in Object Appearance/Animation', 3 ],
+[ 'Skin Electrical Activity', 'Change in Music/Audio', 3 ],
+[ 'Skin Electrical Activity', 'Object Movement', 1 ],
+[ 'Respiration Rate', 'Object Movement', 4 ],
+[ 'Respiration Rate', 'Change in Light/Colour', 3 ],
+[ 'Respiration Rate', 'Levitation/Floating', 1 ],
+[ 'Respiration Rate', 'Change in Object Appearance/Animation', 6 ],
+[ 'Respiration Rate', 'Change in Music/Audio', 7 ],
+[ 'Respiration Rate', 'User Movement', 2 ],
+[ 'Head', 'User Movement', 1 ],
+[ 'Body', 'User Movement', 3 ],
+[ 'Body', 'Change in Object Appearance/Animation', 2 ],
+[ 'Body', 'Change in Music/Audio', 1 ],
+[ 'Body', 'Object Movement', 1 ],
+[ 'Body', 'Change in Light/Colour', 1 ],
+[ 'Arm', 'Change in Object Appearance/Animation', 1 ],
+[ 'Arm', 'Object Movement', 4 ],
+[ 'Arm', 'Change in Light/Colour', 2 ],
+[ 'Joystick', 'User Movement', 4 ],
+[ 'User Movement', 'Relaxed', 3 ],
+[ 'User Movement', 'Calm', 2 ],
+[ 'User Movement', 'Focused', 1 ],
+[ 'User Movement', 'Decreased Stress/Anxiety', 2 ],
+[ 'User Movement', 'Increased Mindfulness', 1 ],
+[ 'User Movement', 'Presence/Social Presence/Embodiment', 2 ],
+[ 'User Movement', 'Connection/Empathy', 2 ],
+[ 'User Movement', 'Emptiness/Disembodied/Self-transcendence', 1 ],
+[ 'User Movement', 'Engaged', 2 ],
+[ 'User Movement', 'Appreciation', 1 ],
+[ 'User Movement', 'Increased Risk Perception', 1 ],
+[ 'Change in Light/Colour', 'Relaxed', 7 ],
+[ 'Change in Light/Colour', 'Calm', 2 ],
+[ 'Change in Light/Colour', 'Content/Happy', 4 ],
+[ 'Change in Light/Colour', 'Clarity', 2 ],
+[ 'Change in Light/Colour', 'Decreased Stress/Anxiety', 1 ],
+[ 'Change in Light/Colour', 'Increased Mindfulness', 1 ],
+[ 'Change in Light/Colour', 'Harmony/Balance', 4 ],
+[ 'Change in Light/Colour', 'Connection/Empathy', 1 ],
+[ 'Change in Light/Colour', 'Reflected Affect', 1 ],
+[ 'Object Movement', 'Relaxed', 3 ],
+[ 'Object Movement', 'Calm', 6 ],
+[ 'Object Movement', 'Increased Well-being', 4 ],
+[ 'Object Movement', 'Clarity', 3 ],
+[ 'Change in Object Appearance/Animation', 'Relaxed', 4 ],
+[ 'Change in Object Appearance/Animation', 'Calm', 4 ],
+[ 'Change in Object Appearance/Animation', 'Increased Well-being', 2 ],
+[ 'Change in Object Appearance/Animation', 'Clarity', 1 ],
+[ 'Change in Object Appearance/Animation', 'Focused', 2 ],
+[ 'Change in Object Appearance/Animation', 'Decreased Stress/Anxiety', 2 ],
+[ 'Change in Object Appearance/Animation', 'Increased Mindfulness', 4 ],
+[ 'Change in Object Appearance/Animation', 'Presence/Social Presence/Embodiment', 2 ],
+[ 'Change in Object Appearance/Animation', 'Connection/Empathy', 3 ],
+[ 'Change in Object Appearance/Animation', 'Engaged', 3 ],
+[ 'Change in Object Appearance/Animation', 'Appreciation', 1 ],
+[ 'Change in Music/Audio', 'Relaxed', 8 ],
+[ 'Change in Music/Audio', 'Calm', 3 ],
+[ 'Change in Music/Audio', 'Content/Happy', 3 ],
+[ 'Change in Music/Audio', 'Increased Well-being', 1 ],
+[ 'Change in Music/Audio', 'Clarity', 2 ],
+[ 'Change in Music/Audio', 'Focused', 3 ],
+[ 'Change in Music/Audio', 'Decreased Stress/Anxiety', 3 ],
+[ 'Change in Music/Audio', 'Increased Mindfulness', 3 ],
+[ 'Change in Music/Audio', 'Harmony/Balance', 3 ],
+[ 'Change in Music/Audio', 'Connection/Empathy', 1 ],
+[ 'Change in Music/Audio', 'Emptiness/Disembodied/Self-transcendence', 1 ],
+[ 'Change in Music/Audio', 'Engaged', 1 ],
+[ 'Change in Music/Audio', 'Reflected Affect', 1 ],
+[ 'Levitation/Floating', 'Relaxed', 1 ],
+[ 'Levitation/Floating', 'Calm', 2 ],
+[ 'Levitation/Floating', 'Focused', 1 ],
+[ 'Levitation/Floating', 'Harmony/Balance', 1 ],
+[ 'Levitation/Floating', 'Increased Mindfulness', 1 ],
+[ 'Levitation/Floating', 'Presence/Social Presence/Embodiment', 2 ]
+]);
+
+var colors = ['#003049', '#D62828', '#F77F00'];
+
+var options = {
+height: 600,
+width: 1200,
+sankey: {
+node: { 
+label: {fontName: 'Times-Roman',
+fontSize: 15,
+bold: true,
+},
+colors: colors
+},
+link: {
+colorMode: 'gradient',
+colors: colors
+}
+}
+};
+
+
+// Instantiate and draw our chart, passing in some of the options.
+var chart = new google.visualization.Sankey(document.getElementById('sankey_multiple'));
+chart.draw(data, options);
+}
+</script>
 </body>
 </html>
+
